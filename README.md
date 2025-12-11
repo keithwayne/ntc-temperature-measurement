@@ -1,6 +1,8 @@
 # ntc-temperature-measurement  
 NTC 热敏电阻温度测量原理、电路设计与代码实现  
 
+！！！目前只是Test Board版本，后续更新硬件改进后的版本！！！  
+
 ntc-temperature-measurement/
 ├── 32K闪存增强通用型MCU CH32V005 - 南京沁恒微电子股份有限公司  #Internet快捷方式 CH32V005官网网址  
 ├── CH32V006DS0.PDF        # CH32V006/V005 数据手册  
