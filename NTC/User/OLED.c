@@ -536,22 +536,19 @@ void OLED_Init (void) {
 
     GPIO_InitTypeDef GPIO_InitStructure;
 
-    RCC_PB2PeriphClockCmd (RCC_PB2Periph_GPIOD, ENABLE);  // 使能A端口时钟
-
-    RCC_PB2PeriphClockCmd (RCC_PB2Periph_AFIO, ENABLE);
-    GPIO_PinRemapConfig (GPIO_Remap_SDI_Disable, ENABLE);
+    RCC_PB2PeriphClockCmd (RCC_PB2Periph_GPIOC, ENABLE);  // 使能A端口时钟
 
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;  // 速度50MHz
-    GPIO_Init (GPIOD, &GPIO_InitStructure);
+    GPIO_Init (GPIOC, &GPIO_InitStructure);
 
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;  // 速度50MHz
-    GPIO_Init (GPIOD, &GPIO_InitStructure);
+    GPIO_Init (GPIOC, &GPIO_InitStructure);
 
-    GPIO_SetBits (GPIOD, GPIO_Pin_0 | GPIO_Pin_1);
+    GPIO_SetBits (GPIOC, GPIO_Pin_0 | GPIO_Pin_3);
 
 	OLED_WR_Byte(0xAE,OLED_CMD); /*display off*/ 
 	OLED_WR_Byte(0x02,OLED_CMD); /*set lower column address*/ 
