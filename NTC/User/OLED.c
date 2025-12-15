@@ -531,9 +531,6 @@ u32 u8pow (u8 m, u8 n) {
 
 // OLED的初始化
 void OLED_Init (void) {
-    Delay_Ms (200);
-    Delay_Ms (2000);
-
     GPIO_InitTypeDef GPIO_InitStructure;
 
     RCC_PB2PeriphClockCmd (RCC_PB2Periph_GPIOC, ENABLE);  // 使能A端口时钟
